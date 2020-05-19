@@ -1,0 +1,568 @@
+/*
+font-family: 'Great Vibes', cursive;
+font-family: 'Nanum Myeongjo', serif;
+font-family: 'Roboto', sans-serif;
+
+We'll use it later 
+
+*/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* header */
+
+.head-part{
+    display: flex;
+    background: #000;
+    padding: 20px 0;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#logo{
+    flex: 1;
+}
+
+#logo img{
+    width: 70px;
+}
+
+#site-name{
+    flex: 1;
+    align-self: center;
+}
+
+#site-name h1{
+    color: white;
+    font-size: 22px;
+}
+
+.media-icons{
+    flex: 1;
+    align-self: center;
+}
+
+.media-icons .fab{
+    color: white;
+}
+
+.media-icons ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.media-icons ul li{
+    display: inline-block;
+    padding: 0px 10px;
+    font-size: 25px;
+}
+
+.media-icons ul li:nth-child(1) i:hover{
+    color: #3b5998;
+}
+
+.media-icons ul li:nth-child(2) i:hover{
+    color: #f61c0d;
+}
+
+.media-icons ul li:nth-child(3) i:hover{
+    color: #55acee;
+}
+
+.media-icons ul li:nth-child(4) i:hover{
+    color: #a51cac;
+}
+
+header{
+    position: sticky;
+    top: -114px;
+    z-index: 1;
+    /* you'll see its effect later after we add more content to our web page */
+}
+
+/* nav section */
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    background: #fff;
+    box-shadow: 1px 1px 20px grey;
+}
+
+.nav-bar h4{
+    font-size: 15px;
+    font-weight: 100;
+    opacity: 0.5;;
+    margin-left: 20px;
+}
+
+.navigation ul{
+    display: flex;
+    list-style: none;
+}
+
+.navigation ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding-right: 30px;
+}
+
+.navigation ul li a:hover{
+    color: powderblue;
+}
+
+/** banner header image */
+
+.header-img{
+    height: 60vh;
+    background: url("./images/header.jpg") center/cover no-repeat;
+    position: relative;
+}
+
+.header-img h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 18px 15px;
+    width: 80%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+
+/* main content */
+
+
+section{
+    background: #f7f7f7;
+    margin: 30px 0;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 20px;
+}
+
+article{
+    background: white;
+    padding: 30px;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+.article-img img{
+    width: 100%;
+}
+
+article .date{
+    font-size: 15px;
+    color: grey;
+    text-align: center;
+    padding: 5px;
+}
+
+article .title-of-post{
+    font-size: 25px;
+    text-align: center;
+    padding: 5px;
+}
+
+article .para{
+    color: black;
+    margin: 30px 0;
+    line-height: 24px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+article .category{
+    color: #e27a3e;
+    font-weight: 100;
+    text-align: center;
+    padding: 16px;
+    font-size: 15px;
+}
+
+button{
+    padding: 8px 14px;
+    border: 1px solid grey;
+    background: white;
+    color: grey;
+    display: block;
+    margin: 0 auto;
+    transition: background 1s ease, color 1s ease, border 1s ease;
+}
+
+button:hover{
+    background-color: #e37f45;
+    color: white;
+    border: 1px solid #e37f45;
+}
+
+#quote{
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+#quote blockquote{
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* sidebars */
+
+/* let's deal with this annoying images with extra large size */
+
+.side img{
+    width: 100%;
+}
+
+.side{
+    background: white;
+    margin: 60px 0px;
+    padding: 35px;
+    font-family: 'Nanum Myeongjo', serif;
+    text-align: center;
+}
+
+.side p{
+    font-size: 15px;
+    color: black;
+    line-height: 25px;
+}
+
+.side-1 h3::after,
+.side-2 h3::after{
+    content: "__________";
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 100;
+    color: #d95204;
+}
+
+.side-2 img{
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 0;
+    transition: all 1s ease;
+}
+
+.side-2 img:hover{
+    transform: scale(1.2);
+}
+
+.side-2 a{
+    display: block;
+    font-size: 18px;
+    padding: 10px 0;
+    color: #dd631d;
+    font-weight: bold;
+}
+
+.side-2 p{
+    text-align: justify;
+}
+
+.side-2 a:hover{
+    color: grey;
+}
+
+.side-3 #email{
+    padding: 14px 20px;
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    outline: none;
+    background: #f7f7f7;
+}
+
+.side-3 #submit{
+    padding: 14px 20px;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    background: whitesmoke;
+    border: 1px solid darkgrey;
+}
+
+.side-3 #submit:hover{
+    border: 1px solid black;
+}
+
+.side-4 img{
+    display: block;
+    padding: 10px;
+}
+
+.side-4 img:hover{
+    opacity: 0.8;
+}
+
+/* footer */
+
+footer{
+    background: white;
+}
+
+#footer-title{
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    padding: 30px 30px 10px 30px;
+}
+
+.top-footer{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 30px;
+}
+
+.top-footer p{
+    color: grey;
+    text-align: justify;
+    line-height: 24px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.top-footer button{
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #7b7b7b;
+    padding: 15px 40px;
+    background: white;
+    color: grey;
+}
+
+.top-footer button:hover{
+    background: #e37f45;
+    color: white;
+    border: 2px solid #e37f45;
+}
+
+.bottom-footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: white;
+}
+
+.bottom-footer h3{
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: black;
+}
+
+.footer-sec-1{
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: black;
+}
+
+.footer-sec-1 p{
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.footer-sec-2{
+    padding: 20px;
+    border-right: 2px solid grey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-sec-2 ul li{
+    list-style-type: none;
+    padding: 10px 5px;
+}
+
+.footer-sec-2 li:hover{
+    background: lightgray;
+    opacity: 0.8;
+}
+
+.footer-sec-2 a{
+    color: black;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* media queries */
+
+@media screen and (max-width: 992px){
+    .nav-bar h4{
+        display: none;
+    }
+    .navigation{
+        margin-left: 30px;
+    }
+    main{
+        grid-template-columns: 1fr;
+    }
+    article{
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+    .side-2-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+    }
+    .side-3 #email{
+        width: 50vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .side-3 #submit{
+        width: 150px;
+    }
+    .side-4 #more-places{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .top-footer{
+        grid-template-columns: 1fr;
+    }
+    .top-footer button{
+        margin-top: 20px;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    #logo{
+        display: none;
+    }
+    #site-name{
+        margin-left: 20px;
+    }
+    .header-img{
+        height: 20vh;
+    }
+    .header-img h1{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 678px){
+    header{
+        position: relative;
+        top: 0;
+    }
+    .nav-bar{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navigation{
+        margin-left: 0;
+    }
+
+    .navigation ul{
+        flex-direction: column;
+    }
+    .navigation ul li a{
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 10px 0;
+    }
+    .side-2-container{
+        grid-template-columns: 1fr;
+    }
+
+    .side-4 #more-places{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .head-part{
+        flex-direction: column;
+    }
+    .media-icons{
+        padding-top: 20px;
+    }
+    .bottom-footer{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/*
+
+That's it for today.
+Thank you for watching this video.
+
+If you like this video , then please don't forget to like, share and subscribe this youtube channel for getting for updates.
+
+Thank You!
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
